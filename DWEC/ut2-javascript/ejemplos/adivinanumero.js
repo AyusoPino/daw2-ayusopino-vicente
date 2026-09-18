@@ -1,5 +1,5 @@
 //ADIVINA EL NÚMERO
-
+const prompt = require('prompt-sync')(); // Importa la librería prompt-sync para permitir la entrada de datos por consola
 const INTENTOS_MAXIMOS = 5;  // Número máximo de intentos permitidos
 const NUMERO_MAXIMO = 10; // Número máximo que el usuario puede adivinar (0 a NUMERO_MAXIMO)
 
@@ -13,16 +13,16 @@ while (intentos < INTENTOS_MAXIMOS && !acertado) { // Bucle que se ejecuta mient
     intentos++;
 
     if (numeroUsuario === numeroSecreto) { //Si el numero ingresado por el usuario es igual al secreto, lanza una alerta de correcto
-        alert(`¡Felicidades! Has adivinado el número secreto ${numeroSecreto} en ${intentos} intentos.`);
+        console.log(`¡Felicidades! Has adivinado el número secreto ${numeroSecreto} en ${intentos} intentos.`);
         acertado = true;
     }
 
     if (numeroUsuario < numeroSecreto) { //Si el numero ingresado por el usuario es menor al secreto, lanza una alerta de mayor
-        alert("El número secreto es mayor. Intenta de nuevo.");
+        console.log("El número secreto es mayor. Intenta de nuevo.");
     } else if (numeroUsuario > numeroSecreto) { //Si el numero ingresado por el usuario es mayor al secreto, lanza una alerta de menor
-        alert("El número secreto es menor. Intenta de nuevo.");
+        console.log("El número secreto es menor. Intenta de nuevo.");
     } 
     else { // Si el número ingresado no es válido, lanza una alerta indicando que se debe introducir un número válido
-        alert("Por favor, introduce un número válido.");
+        console.log("Por favor, introduce un número válido.");
     }
 }
