@@ -84,3 +84,27 @@
 | replaceAll()   | Reemplazar todas las coincidencias               |
 | split()        | Dividir la cadena y crear un array               |
 | concat()       | Unir cadenas                                     |
+
+## Funciones
+> Es un bloque de código con un nombre que realiza una tarea específica y se puede usar varias veces
+
+### <u>Partes de una función</u>
+
+__Nombre__: La palabra que identifica a la función.
+
+__Parámetros (o entradas)__: Los datos que recibe la función para trabajar.
+
+__Cuerpo__: Las instrucciones que hacen el trabajo.
+
+__Retorno (o salida)__: El resultado que la función entrega al terminar.
+
+```EJEMPLO 
+// 1. Declaración de la función
+function sumar(a, b) {
+    return a + b; // Devuelve la suma de los dos parámetros
+}
+
+// 2. Llamada o ejecución de la función
+let resultado = sumar(5, 3);
+
+console.log(resultado); // Imprime: 8```
