@@ -4,18 +4,21 @@ const PROMPT = require('prompt-sync')(); // Importa la librería prompt-sync par
 
 let listaDeLaCompra = [];
 
-while (true) {
-    let articulo = PROMPT("Introduce un artículo para la lista de la compra (o pulsa Enter para finalizar): ");
+//Definir variable con condicion de salida
+let condicionDeSalida = false;
 
-    if (articulo === "") {
-        break;
-    }
+while (!condicionDeSalida) {
+    let articulo = PROMPT("Introduce un artículo para la lista de la compra (o pulsa Enter para finalizar): ");
 
     if (listaDeLaCompra.includes(articulo)) {
         console.log(`El artículo "${articulo}" ya existe en la lista.`);
     } else {
         listaDeLaCompra.push(articulo);
         console.log(`El artículo "${articulo}" ha sido añadido a la lista.`);
+    }
+
+    if (articulo === "") {
+        condicionDeSalida = true;
     }
 }
 
