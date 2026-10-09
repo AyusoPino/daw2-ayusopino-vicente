@@ -4,19 +4,19 @@ export default class Cuenta {
         this.cantidad = Math.max(0, cantidad);
     }
 
-    getTitular() {
+    get titular() {
         return this.titular;
     }
 
-    setTitular(titular) {
+    set titular(titular) {
         this.titular = titular;
     }
 
-    getCantidad() {
+    get cantidad() {
         return this.cantidad;
     }
 
-    setCantidad(cantidad) {
+    set cantidad(cantidad) {
         this.cantidad = Math.max(0, cantidad);
     }
 

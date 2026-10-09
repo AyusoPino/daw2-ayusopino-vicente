@@ -1,22 +1,23 @@
+
 class Cuenta {
     constructor(titular, cantidad = 0) {
         this.titular = titular;
         this.cantidad = Math.max(0, cantidad);
     }
 
-    getTitular() {
+    get titular() {
         return this.titular;
     }
 
-    setTitular(titular) {
+    set titular(titular) {
         this.titular = titular;
     }
 
-    getCantidad() {
+    get cantidad() {
         return this.cantidad;
     }
 
-    setCantidad(cantidad) {
+    set cantidad(cantidad) {
         this.cantidad = Math.max(0, cantidad);
     }
 
@@ -31,26 +32,25 @@ class Cuenta {
     }
 
     retirar(cantidad) {
-        if (cantidad > 0) 
+        if (cantidad > 0) {
             this.cantidad = Math.max(0, this.cantidad - cantidad);
+        }
     }
 }
 
-
 // PRUEBA
 
-let cuenta = new Cuenta("Vicente", 100);
+let cuenta1 = new Cuenta("Vicente");
+let cuenta2 = new Cuenta("Vicente", 100);
 
-console.log("Saldo inicial:", cuenta.getCantidad());
+console.log(cuenta1.toString());
+console.log(cuenta2.toString());
 
-cuenta.ingresar(10);
-console.log("Después de ingresar 10:", cuenta.getCantidad());
+cuenta2.ingresar(10);
+console.log("Después de ingresar 10:", cuenta2.getCantidad());
 
-cuenta.retirar(50);
-console.log("Después de retirar 50:", cuenta.getCantidad());
+cuenta2.retirar(50);
+console.log("Después de retirar 50:", cuenta2.getCantidad());
 
-cuenta.ingresar(15);
-console.log("Después de ingresar 15:", cuenta.getCantidad());
-
-cuenta.retirar(100);
-console.log("Después de retirar 100:", cuenta.getCantidad());
+cuenta2.retirar(100);
+console.log("Después de retirar 100:", cuenta2.getCantidad());
