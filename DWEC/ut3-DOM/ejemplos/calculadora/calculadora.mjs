@@ -1,4 +1,3 @@
-
 "use strict";
 
 import { Calculadora } from "./calculadora-clase.mjs";
@@ -24,6 +23,8 @@ const operaciones = {
     "x": () => calculadora.seleccionarOperacion("multiplicar"),
     "-": () => calculadora.seleccionarOperacion("restar"),
     "+": () => calculadora.seleccionarOperacion("sumar"),
+    "I": () => calculadora.seleccionarOperacion("incrementar"), // CORREGIDO
+    "&": () => calculadora.seleccionarOperacion("ampersant"),
     "=": () => calculadora.calcular(),
     ",": () => calculadora.agregarComa()
 };
@@ -70,6 +71,10 @@ document.addEventListener("keydown", (evento) => {
         calculadora.seleccionarOperacion("multiplicar");
     } else if (evento.key === "/") {
         calculadora.seleccionarOperacion("dividir");
+    } else if (evento.key.toUpperCase() === "I") {
+        calculadora.seleccionarOperacion("incrementar"); // CORREGIDO
+    } else if (evento.key === "&") {
+        calculadora.seleccionarOperacion("ampersant");
     } else if (evento.key === "Enter" || evento.key === "=") {
         calculadora.calcular();
     } else if (evento.key === "Escape") {

@@ -5,19 +5,19 @@ export default class Cuenta {
     }
 
     get titular() {
-        return this.titular;
+        return this._titular;
     }
 
     set titular(titular) {
-        this.titular = titular;
+        this._titular = titular;
     }
 
     get cantidad() {
-        return this.cantidad;
+        return this._cantidad;
     }
 
     set cantidad(cantidad) {
-        this.cantidad = Math.max(0, cantidad);
+        this._cantidad = Math.max(0, cantidad);
     }
 
     toString() {

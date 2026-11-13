@@ -112,6 +112,16 @@ export class Calculadora {
         return a / b;
     }
 
+    // Incrementa el número en uno
+    incrementar(a) {
+        return a + 1;
+    }
+
+    // Realiza la operación AND entre dos números enteros
+    ampersant(a, b) {
+        return a & b;
+    }
+
     // Guarda el operador seleccionado
     seleccionarOperacion(operador) {
         if (this.pantalla === "ERROR") {
@@ -121,6 +131,15 @@ export class Calculadora {
 
         if (this.operador !== null && !this.nuevoNumero) {
             this.calcular();
+        }
+
+        // Para incrementar no necesitamos un segundo número
+        if (operador === "incrementar") {
+            this.pantalla = String(this.incrementar(this.obtenerNumero()))
+                .replace(".", ",");
+            this.nuevoNumero = true;
+            this.actualizarPantalla();
+            return;
         }
 
         this.numeroAnterior = this.obtenerNumero();
@@ -162,6 +181,12 @@ export class Calculadora {
                         this.numeroAnterior, numeroActual
                     );
                     break;
+
+                case "ampersant":
+                    resultado = this.ampersant(
+                        this.numeroAnterior, numeroActual
+                    );
+                    break;
             }
 
             if (!Number.isFinite(resultado)) {
@@ -169,7 +194,7 @@ export class Calculadora {
             }
 
             // Limita los decimales del resultado
-            resultado = Number(resultado.toPrecision(10));
+            resultado = Number(resultado.toPrecision(100));
 
             this.pantalla = String(resultado).replace(".", ",");
             this.numeroAnterior = null;

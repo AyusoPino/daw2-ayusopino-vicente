@@ -6,19 +6,19 @@ class Cuenta {
     }
 
     get titular() {
-        return this.titular;
+        return this._titular;
     }
 
     set titular(titular) {
-        this.titular = titular;
+        this._titular = titular;
     }
 
     get cantidad() {
-        return this.cantidad;
+        return this._cantidad;
     }
 
     set cantidad(cantidad) {
-        this.cantidad = Math.max(0, cantidad);
+        this._cantidad = Math.max(0, cantidad);
     }
 
     toString() {
@@ -36,7 +36,7 @@ class Cuenta {
             this.cantidad = Math.max(0, this.cantidad - cantidad);
         }
     }
-}
+} 
 
 // PRUEBA
 
@@ -47,10 +47,10 @@ console.log(cuenta1.toString());
 console.log(cuenta2.toString());
 
 cuenta2.ingresar(10);
-console.log("Después de ingresar 10:", cuenta2.getCantidad());
+console.log("Después de ingresar 10:", cuenta2.cantidad);
 
 cuenta2.retirar(50);
-console.log("Después de retirar 50:", cuenta2.getCantidad());
+console.log("Después de retirar 50:", cuenta2.cantidad);
 
 cuenta2.retirar(100);
-console.log("Después de retirar 100:", cuenta2.getCantidad());
+console.log("Después de retirar 100:", cuenta2.cantidad);

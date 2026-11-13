@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora jQuery</title>
+    <link rel="stylesheet" href="calculadora.css">
+    <!-- Cargamos jQuery antes de nuestro archivo JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="calculadora.js" defer></script>
+</head>
+<body>
+    <main class="calculadora">
+        <h1>Calculadora</h1>
+
+        <input type="text" id="pantalla" value="0" readonly aria-label="Pantalla de la calculadora">
+
+        <div class="teclas">
+            <button type="button" data-tecla="AC" class="funcion">AC</button>
+            <button type="button" data-tecla="+/-" class="funcion">+/-</button>
+            <button type="button" data-tecla="%" class="funcion">%</button>
+            <button type="button" data-tecla="/" class="operacion">÷</button>
+
+            <button type="button" data-tecla="7">7</button>
+            <button type="button" data-tecla="8">8</button>
+            <button type="button" data-tecla="9">9</button>
+            <button type="button" data-tecla="*" class="operacion">×</button>
+
+            <button type="button" data-tecla="4">4</button>
+            <button type="button" data-tecla="5">5</button>
+            <button type="button" data-tecla="6">6</button>
+            <button type="button" data-tecla="-" class="operacion">−</button>
+
+            <button type="button" data-tecla="1">1</button>
+            <button type="button" data-tecla="2">2</button>
+            <button type="button" data-tecla="3">3</button>
+            <button type="button" data-tecla="+" class="operacion">+</button>
+
+            <button type="button" data-tecla="0" class="cero">0</button>
+            <button type="button" data-tecla=".">,</button>
+            <button type="button" data-tecla="=" class="igual">=</button>
+        </div>
+    </main>
+</body>
+</html>

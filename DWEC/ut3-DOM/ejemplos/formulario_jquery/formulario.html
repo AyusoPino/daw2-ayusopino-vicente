@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de cliente - jQuery</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="formulario.mjs" defer></script>
+</head>
+<body>
+    <h1>Formulario de cliente</h1>
+
+    <form id="formulario" novalidate>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"
+            data-ayuda="Introduce tu nombre."
+            data-validacion="obligatorio">
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos"
+            data-ayuda="Introduce tus apellidos."
+            data-validacion="obligatorio">
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni"
+            data-ayuda="Introduce tu DNI con su letra."
+            data-validacion="dni">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"
+            data-ayuda="Introduce tu correo electrónico."
+            data-validacion="email">
+
+        <label for="contrasena1">Contraseña:</label>
+        <input type="password" id="contrasena1" name="contrasena1"
+            data-ayuda="Introduce una contraseña."
+            data-validacion="obligatorio">
+
+        <label for="contrasena2">Repite la contraseña:</label>
+        <input type="password" id="contrasena2" name="contrasena2"
+            data-ayuda="Escribe de nuevo la misma contraseña."
+            data-validacion="contrasenas">
+
+        <div class="acciones">
+            <button type="submit">Aceptar</button>
+            <button type="reset">Limpiar</button>
+        </div>
+    </form>
+
+    <div id="ayuda" aria-live="polite">
+        <p id="mensaje"></p>
+    </div>
+
+</body>
+</html>
