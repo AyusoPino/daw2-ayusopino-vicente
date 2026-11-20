@@ -1,0 +1,13 @@
+{
+  "contactos": [
+    {
+      "id": "1",
+      "nombre": "Ana"
+    },
+    {
+      "id": "2",
+      "nombre": "Luis"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

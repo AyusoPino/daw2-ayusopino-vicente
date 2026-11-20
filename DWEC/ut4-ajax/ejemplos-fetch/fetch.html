@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="fetch.mjs" type="module" defer></script>
+</head>
+<body>
+    <p>URL</p>
+    <input type="text" name="url" id="url">
+
+    <p>Metodo</p>
+    <select name="metodo" id="metodo">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+    </select>
+
+    <p>Peticion</p>
+    <textarea type="textarea" rows="10" cols="30" id="peticion"></textarea>
+    
+    <p>Respuesta</p>
+    <textarea type="textarea" rows="10" cols="30" id="respuesta"></textarea>
+    
+    </br>
+    
+    <button id="enviar">Enviar</button>
+</body>
+</html>
